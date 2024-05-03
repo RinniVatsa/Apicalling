@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Layout } from 'antd';
+import 'antd/dist/reset.css';
 import './App.css';
+import PostTable from './Components/PostTable';
+import PostsPage from './Components/PostsPage';
+import NotFoundPage from './Components/NotFoundPage';
+
+const { Content } = Layout;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+
+
+
+
+        <
+        Router >
+        <
+        Layout className = "layout" >
+        <
+        Content >
+        <
+        Routes >
+        <
+        Route exact path = "/"
+        element = { < PostsPage / > } > < /Route >  <
+        Route exact path = "/
+        " element={< NotFoundPage />}></Route>   < /
+        Routes > < /
+        Content > < /
+        Layout > <
+        /Router>
+    );
 }
 
 export default App;
